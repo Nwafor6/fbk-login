@@ -42,6 +42,11 @@
                            <!-- If you are not logged in, the login dialog will open for you to login asking for permission to get your public profile and email -->
                            console.log('User cancelled login or did not fully authorize.'); }
             });
+                FB.getLoginStatus(function(response) {
+                if (response.status === 'connected') {
+                    console.log(response.authResponse.accessToken, "tokennnnnnn");
+                }
+            });
         };
 
       </script>
